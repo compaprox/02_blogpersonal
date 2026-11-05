@@ -1,46 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="blog personal de cristian sobre desarrollo web">
+    <meta name="description" content="Contacta con Cristian para compartir preguntas, ideas y propuestas sobre tecnología y vida marina.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | blog de cristian</title>
+    <title>Contacto | Blog de Cristian</title>
 </head>
 <body>
     <header>
         <h1>Blog de Cristian</h1>
-        <p>EL MEJOR HOMBRE DEL MUNDO AQUI HOLAAAAAAAAAAAAAA<p>
-        </nav>
+        <p>Descubriendo los misterios del océano y la vida marina.</p>
+
+        <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="articulo-1.html">ARTÍCULO 1</a></li>
-                <li><a href="articulo-2.html">ARTÍCULO 2</a></li>
-                <li><a href="sobre mi.html">Sobre mi</a></li>
-                <li><a href="contacto">contacto</a></li>
+                <li><a href="articulo-1.html">Artículo 1</a></li>
+                <li><a href="articulo-2.html">Artículo 2</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-        <nav>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>Bienvenido a mi blog</h2>
-            <article>
-                <h3>Titulo del artículo 1</h3>
-                <p><time datetime="2026-10-29">29 DE OCTUBRE DEL 2026</time></p>
-                <P>¿Sabías que los pulpos tienen tres corazones y sangre azul? 
-                    Y cuando nadan, ¡uno de sus corazones deja de latir temporalmente!</P>
-            </article>
-            <article>
-                <h3>Titulo del artículo 2</h3>
-                <p><time datetime="2026-10-22">22 DE OCTUBRE DEL 2026</time></p>
-                <P>¿Sabías que los pulpos tienen tres corazones y sangre azul? <br>
-                    Y cuando nadan, ¡uno de sus corazones deja de latir temporalmente!</P>
-            </article>
-        </section>
 
+    <main>
+        <h2>Contacto</h2>
+
+        <p>
+            ¿Tienes alguna pregunta o propuesta relacionada
+            con la tecnología, los océanos o la vida marina?
+            Escríbeme mediante este formulario.
+        </p>
+
+        <form>
+            <p>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre"
+                       name="nombre" required>
+            </p>
+
+            <p>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo"
+                       name="correo" required>
+            </p>
+
+            <p>
+                <label for="asunto">Asunto:</label><br>
+                <select id="asunto" name="asunto">
+                    <option>Consulta</option>
+                    <option>Colaboración</option>
+                    <option>Vida marina</option>
+                    <option>Otro</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje"
+                          rows="5" cols="40"
+                          required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Enviar</button>
+            </p>
+        </form>
     </main>
+
     <footer>
         <p>Derechos reservados © 2026 Cristian</p>
+        <p>
+            Última actualización:
+            <time datetime="2026-11-05">5 de noviembre de 2026</time>
+        </p>
     </footer>
 </body>
 </html>
