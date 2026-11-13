@@ -12,7 +12,7 @@
     --color-fondo: #6290c8;
     --color-superficie: #fff;
     --color-texto-suave: #82a8d7;
-    --color-borde: #09f9c5;
+    --color-borde: #5dad9b;
 
     /* tipografia */
     --fuente-texto: 'Inter',system-ui, sans-serif;
@@ -22,6 +22,10 @@
     --ancho-maximo: 1200px;
     --ancho-contenido: 800px;
 
+    /* tarjetas */
+    --radio: 8px;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.8);
+    --sombra-fuerte: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 /* correccion del calculo del tamaño de las cajas box */
 *,
@@ -130,4 +134,11 @@ nav a:hover {
 nav a.activo {
     background-color: white;
     color: var(--color-principal);
+}
+
+/*tarjetas de los articulos*/
+.tarjeta {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
