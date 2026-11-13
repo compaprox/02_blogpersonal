@@ -1,0 +1,133 @@
+/* Estilos para el blog de Cristian */
+
+/* importar fuentes de google */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=poppins:wght@600;700&display=swap");
+
+/* crear variables */
+:root {
+    /* colores */
+    --color-principal:#476db8;
+    --color-secundario: #425875;
+    --color-texto: #d2dee8;
+    --color-fondo: #6290c8;
+    --color-superficie: #fff;
+    --color-texto-suave: #82a8d7;
+    --color-borde: #09f9c5;
+
+    /* tipografia */
+    --fuente-texto: 'Inter',system-ui, sans-serif;
+    --fuente-titulo: 'Poppins',system-ui, sans-serif;
+
+    /* medidas */
+    --ancho-maximo: 1200px;
+    --ancho-contenido: 800px;
+
+}
+/* correccion del calculo del tamaño de las cajas box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-principal);
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3{
+    font-family: var(--fuente-titulo);
+    color: var(--color-texto);
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* estilos a los enlaces */
+a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+main {
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+    padding:2rem 1.5rem;
+    border: 5px dashed var(--color-borde);
+}
+
+/* Encabezado */
+
+header {
+    background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+    color: var(--color-texto);
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-family: var(--fuente-titulo);
+    font-size: 2.5rem;
+    margin: 0 0 5px;
+}
+
+header p {
+    color: #C5E8EF;
+    margin: 0 0 25px;
+}
+
+/* =====================================
+   MENÚ DE NAVEGACIÓN
+   ===================================== */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+nav a.activo {
+    background-color: white;
+    color: var(--color-principal);
+}
