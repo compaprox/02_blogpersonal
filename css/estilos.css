@@ -6,24 +6,23 @@
 /* crear variables */
 :root {
     /* colores */
-    --color-principal:#476db8;
+    --color-principal:#158c6a;
     --color-secundario: #425875;
     --color-texto: #d2dee8;
-    --color-fondo: #6290c8;
-    --color-superficie: #fff;
-    --color-texto-suave: #82a8d7;
-    --color-borde: #5dad9b;
+    --color-fondo: #3e3f41d3;
+    --color-superficie: hsl(0, 29%, 82%);
+    --color-texto-suave: #0b403d;
 
     /* tipografia */
     --fuente-texto: 'Inter',system-ui, sans-serif;
     --fuente-titulo: 'Poppins',system-ui, sans-serif;
 
     /* medidas */
-    --ancho-maximo: 1200px;
-    --ancho-contenido: 800px;
+    --ancho-maximo: 1080px;
+    --ancho-contenido: 1000px;
 
     /* tarjetas */
-    --radio: 8px;
+    --radio: 15px;
     --sombra: 0 2px 8px rgba(0, 0, 0, 0.8);
     --sombra-fuerte: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
@@ -35,12 +34,12 @@
 }
 
 body {
-    background-color: var(--color-principal);
-    font-family: var(--fuente-texto);
-    font-size: 1rem;
-    line-height: 1.6;
+    background-color: rgba(9, 89, 52, 0.688);
+    color: rgb(81, 51, 9);
     margin: 0;
-    padding: 0;
+    font-family: var(--fuente-texto);
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
 
@@ -92,8 +91,6 @@ header {
 
 header h1 {
     color: white;
-    font-family: var(--fuente-titulo);
-    font-size: 2.5rem;
     margin: 0 0 5px;
 }
 
@@ -132,13 +129,57 @@ nav a:hover {
 }
 
 nav a.activo {
-    background-color: white;
+    background-color: rgb(124, 178, 239);
     color: var(--color-principal);
 }
 
 /*tarjetas de los articulos*/
-.tarjeta {
+.tarjetas {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+}
+
+.tarjeta {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.tarjeta time {
+    color: var(--color-texto-suave);
+    font-size: 0.875rem;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-fuerte);
+}
+.tarjeta .boton {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: rgb(0, 0, 0);
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--color-principal);
+    color: #fff;
+    text-decoration: none;
 }
