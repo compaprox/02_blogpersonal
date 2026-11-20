@@ -10,7 +10,7 @@
     --color-secundario: #425875;
     --color-texto: #d2dee8;
     --color-fondo: #3e3f41d3;
-    --color-superficie: hsl(0, 29%, 82%);
+    --color-superficie: hsl(156, 30%, 41%);
     --color-texto-suave: #0b403d;
 
     /* tipografia */
@@ -77,14 +77,13 @@ main {
     max-width: var(--ancho-contenido);
     margin: 0 auto;
     padding:2rem 1.5rem;
-    border: 5px dashed var(--color-borde);
 }
 
 /* Encabezado */
 
 header {
     background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
-    color: var(--color-texto);
+    color: #fdfdfd;
     padding: 3rem 1.5rem 1.5rem;
     text-align: center;
 }
@@ -182,4 +181,91 @@ nav a.activo {
     background-color: var(--color-principal);
     color: #fff;
     text-decoration: none;
+}
+
+/*estilos a los articulos*/
+
+main article {
+    background-color: var(--color-superficie);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 2rem;
+}
+
+main article h2 {
+    margin-top: 0;
+}
+
+/*imagenes responsivas*/
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radio);
+    display: block;
+    margin: auto;
+}
+
+figure {
+    margin: 1.5rem 0;
+}
+
+figcaption {
+    margin-top: 5rem;
+    color: var(--color-texto-suave);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+main > article > img {
+    margin: 1.5rem;
+}
+
+/*citas*/
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-fondo);
+    border-left: 4px solid var(--color-principal);
+    border-radius: 0 var(--radio) var(--radio)0;
+    font-style: italic;
+}       
+
+blockquote p {
+    margin: 0.25rem 0;
+}
+
+/*tabla de contenido*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;   
+}   
+ th, td {
+    border: 1px solid var(--color-borde);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--color-fondo);
+    color: #000;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+    margin-top: 0.5rem;
+}
+
+tbody td:hover {
+    background-color: var(--color-fondo);
+}
+
+.pagina-simple {
+    background-color: var(--color-superficie);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 2rem;
 }
